@@ -32,7 +32,7 @@ public class ExampleMod {
     // Register the block's item form
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block",
         () -> new BlockItem(EXAMPLE_BLOCK.get(), 
-            new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+            new Item.Properties()));
     
     public ExampleMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

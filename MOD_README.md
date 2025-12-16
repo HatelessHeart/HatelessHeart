@@ -61,11 +61,12 @@ A 16x16 PNG image that gets applied to the block's surfaces. See `textures/block
 
 ## Building the Mod
 
-1. **Clone the repository**:
+1. **Clone or download the repository**:
    ```bash
    git clone https://github.com/HatelessHeart/HatelessHeart.git
    cd HatelessHeart
    ```
+   Or download and extract the repository files to a directory.
 
 2. **Add a texture** (optional):
    Create a 16x16 PNG file and save it as:
@@ -74,9 +75,17 @@ A 16x16 PNG image that gets applied to the block's surfaces. See `textures/block
    ```
 
 3. **Build the mod**:
+   
+   If you have Gradle installed:
+   ```bash
+   gradle build
+   ```
+   
+   Or use the included wrapper (requires system Gradle):
    ```bash
    ./gradlew build
    ```
+   
    On Windows:
    ```bash
    gradlew.bat build
@@ -90,12 +99,17 @@ A 16x16 PNG image that gets applied to the block's surfaces. See `textures/block
 1. Install Minecraft Forge 1.19.2
 2. Copy the jar file from `build/libs/` to your Minecraft `mods` folder
 3. Launch Minecraft with the Forge profile
-4. Find the "Example Block" in the Building Blocks creative tab
+4. The block will be available in the creative inventory
 
 ## Testing in Development
 
-To test the mod in a development environment:
+To test the mod in a development environment (requires Gradle):
 
+```bash
+gradle runClient
+```
+
+Or with the wrapper:
 ```bash
 ./gradlew runClient
 ```
